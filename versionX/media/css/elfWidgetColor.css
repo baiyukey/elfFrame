@@ -1,0 +1,163 @@
+@charset "utf-8"; /*颜色设置，关于颜色以外的CSS属性严禁使用*/
+/*2、一级标签页*/
+section.tagPage ul.menu li a .topBorder{ background-color:transparent; }
+section.tagPage ul.menu li a{ color:#98a6ad; }
+section.tagPage ul.menu li a:hover span{ color:#333333; }
+section.tagPage ul.menu li a span{ border-color:transparent; }
+section.tagPage ul.menu li.curr a .topBorder{ background-color:#333333; }
+section.tagPage ul.menu li.curr a span{ background-color:#FFFFFF; }
+section.tagPage ul.menu li.curr a:hover span{ color:#575755; }
+section.tagPage ul.menu li.curr a span{ border-color:#ebeef2; }
+/*
+section.tagPage ul.menu li.curr a span{border-top-color:#333333;}
+*/
+/*3、二级标签页*/
+section.tagPage2 ul.menu li a{ background:#ebeef2; color:#5E5E5E; }
+section.tagPage2 ul.menu li a:hover{ background:#C4C4C4; }
+section.tagPage2 ul.menu li.curr a{ background:#A0A0A0; color:#FFFFFF; }
+/*4、表格（含表头）*/
+table.tableH{ border-color:#ebeef2; color:#98a6ad }
+table.tableH th{ background-color:#ebeef2; border-color:#ebeef2; }
+table.tableH .space{ background-color:#FFFFFF; }
+/*5、表格（无表头、无边框、无背景）*/
+table.tableN td span.val{ color:#333333; }
+table.tableN th{ background-color:#ebeef2; }
+/*边框表格*/
+.tableBorder table th, .tableBorder table td{ border-color:rgba(255, 255, 255, 0.3); }
+/*6、无背景标题*/
+h5.noBgH5{ border-bottom-color:#ebeef2; color:#474646; background:none; }
+h5.noBgH5 span{ color:#5E5E5E; }
+/*7、组件——按钮*/
+a.button span{ background-color:#333333; color:#FFFFFF; border-color:#333333; }
+a.button:hover span, a.button.hover span{ background-color:#41c679; color:#FFFFFF; border-color:#41c679; }
+a.button span.careful{ background-color:#FF4444; border-color:#FF4444; }
+a.button:hover span.careful{ background-color:#FF6161; }
+a.button.disable span, a.button.disable:hover span{ color:#C4C4C4; border-color:#ebeef2; background-color:#FDFDFD; }
+a.button.disable::after{ visibility:hidden; }
+a.button span.contrast{ background-color:#FFFFFF; color:#333333; border-color:#333333; }
+a.button:hover span.contrast{ border-color:#41c679; color:#41c679; }
+a.button span.gray{ background-color:#FFFFFF; color:#98a6ad; border-color:#98a6ad; }
+a.button:hover span.gray{ border-color:#9eabb5; color:#9eabb5; }
+a.button.active span.gray{ background-color:#98a6ad; color:#FFFFFF; }
+a.searchBtn:hover{ opacity:0.7; }
+a:hover b{ opacity:0.7; }
+/*8、组件——开关按钮*/
+a.switch{ background-color:#A0A0A0; }
+a.switch.on{ background-color:#333333; }
+a.switch.big{ background-color:#A0A0A0; }
+a.switch.big.on{ background-color:#333333; }
+a.switch.S{ background-color:#dadada; }
+a.switch.S.on{ background-color:#333333; }
+a.switch.S div{ color:#767676; }
+a.switch.S div.on{ color:#FFFFFF; }
+a.switch.S div.leftLine{ color:#333333; border-color:#FFFFFF; }
+a.switch.S.on div.leftLine{ color:#FFFFFF }
+a.switch:hover{ opacity:0.8; }
+a.switchPlus .body{ border-color:#697279; background-color:#697279; color:#FFFFFF; }
+a.switchPlus.on .body{ border-color:#27AE60; background-color:#333333; }
+a.switchPlus .switchButton{ background-color:#FFFFFF; color:#98a6ad; border-color:#98a6ad; }
+a.switchPlus.on .switchButton{ color:#27AE60; border-color:#27AE60; }
+a.switchCss3{ border-color:#A0A0A0; background-color:#A0A0A0; color:#FFFFFF; }
+a.switchCss3:hover{ border-color:#A0A0A0; background-color:#A0A0A0; color:#FFFFFF; }
+a.switchCss3 b{ background-color:#FFFFFF; }
+a.switchCss3.on{ border-color:#333333; background-color:#FFFFFF; color:#333333; }
+a.switchCss3.on b{ background-color:#333333; }
+/*多档开关按钮*/
+.switchGear{ border-color:rgba(255, 255, 255, 0); background-color:rgba(0, 0, 0, 0.3); }
+.switchGear:hover b{ opacity:1 }
+.switchGear .flag.dataBackground{ border-color:#369eac; background-color:#369eac; }
+.switchGear .dataItem{ color:#eeeeee; }
+.switchGear .dataItem.hover{ color:#66ffdc; }
+.switchGear .dataItem.current{ color:#ffffff; }
+/*9、组件——复选、单选*/
+
+/*10、组件——下拉菜单*/
+div.downList a.listSelected{ color:#AABBCC; border-color:#274e87; background-color:rgba(0, 0, 0, 0.3); transition-duration:1s; }
+div.downList:before{ color:#AABBCC }
+div.downList.unfold:before{ color:rgba(0, 114, 229, 1) }
+div.downList ul{ border-color:#274e87; background-color:rgba(0, 0, 0, 0.8); }
+div.downList ul li a{ color:#AABBCC; border-bottom-color:rgba(0, 0, 0, 0.3); }
+div.downList ul li a:hover{ color:rgba(0, 114, 229, 1); }
+div.downList ul li a.focusBg{ background-color:rgba(255, 255, 255, 0.1); }
+div.downList ul li.curr a{ background-color:rgba(255, 255, 255, 0.1); color:rgba(0, 114, 229, 1); }
+div.downList b{ color:#274e87; }
+div.downList.unfold b{ color:rgba(0, 114, 229, 1); }
+/*10.1、组件-多选菜单*/
+div.multiSelect{ box-shadow:0 0 7px 0 rgba(0, 0, 0, 0.2) inset; }
+/*11、组件——输入框*/
+input, textarea{ color:#AABBCC; border-color:#274e87; background-color:rgba(0, 0, 0, 0.3); transition-duration:1s; }
+input:focus, textarea:focus{ border-color:rgba(0, 114, 229, 1); box-shadow:0 0 8px 0 rgba(0, 127, 255, .75); background-color:rgba(0, 0, 0, 0.4); }
+input.focus, textarea.focus{ border-color:rgba(0, 114, 229, 1); box-shadow:0 0 8px 0 rgba(0, 127, 255, .75); background-color:rgba(0, 0, 0, 0.4); }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{ opacity:0.3 }
+input:-moz-placeholder, textarea:-moz-placeholder{ opacity:0.3 }
+input::-moz-placeholder, textarea::-moz-placeholder{ opacity:0.3 }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder{ opacity:0.3 }
+input[type="text"]:disabled{ opacity:0.5 }
+.searchHistory{ background:rgba(255, 255, 255, 1); border-color:rgba(31, 35, 51, 0); }
+.searchHistory ul li a{ color:rgba(127, 191, 255, 1); }
+.searchHistory ul li a:hover{ background-color:rgba(0, 114, 229, .5); color:rgba(127, 191, 255, 1); }
+.searchHistory ul li a.focusBg{ background-color:rgba(0, 114, 229, .15); }
+.searchHistory ul li.curr a{ color:rgba(255, 255, 255, 1); }
+.searchHistoryOption{ color:#a1a1a1; }
+/*11、组件——输入框提示*/
+[indicate]{border:1px solid rgba(255, 0, 0, 0.75);box-shadow:0 0 8px 0 rgba(255, 0, 0, 0.75);}
+.indicate{ background-color:rgba(255, 0, 0, 0.75); color:#FFFFFF; }
+/*12、组件——进度条*/
+p.elfProgress{ border-color:#274e87; color:#369eac; }
+/*13、组件——滑块*/
+div.elfNumber a.curr{ color:#ffffff }
+div.elfNumber p.bar{ border-color:#274e87; }
+div.elfNumber p.bar span{ color:#FFFFFF; background-color:rgb(54, 158, 172); }
+div.elfNumber p.bar a.elfNumberButton{ background:#FFFFFF; border-color:rgb(54, 158, 172); }
+div.elfNumber p.bar a.elfNumberButton b{ background:rgb(54, 158, 172); }
+/*14、弹窗*/
+.alert{ box-shadow:0 0 10px rgba(0, 0, 0, 0.3); }
+.alert .alertTitle p{ color:#98a6ad; background-color:#e6e6e6; }
+.alert .alertContent{ background-color:#FFFFFF; border-color:#e6e6e6; }
+.alert .alertButtonBox{ border-top-color:#e6e6e6 }
+/*15、翻页页码*/
+.pageNumberBox p{ border-color:#556677; }
+.pageNumberBox p a{ border-color:#556677; background:#AABBCC; color:#112233; }
+.pageNumberBox p a:hover{ border-color:#556677; background-color:#556677; color:#AABBCC; }
+.pageNumberBox p a:active{ }
+.pageNumberBox p a.curr{ border-color:#556677; background-color:#556677; color:#AABBCC; }
+.pageNumberBox p .pageCount{ background-color:#AABBCC; color:#112233; }
+.pageNumberBox p.jumpBox{ background-color:#AABBCC; color:#112233; }
+.pageNumberBox p.jumpBox input.inputPageNum{ background-color:#112233; color:#AABBCC; }
+.pageNumberBox.dark p{ color:#AABBCC; }
+.pageNumberBox.dark p a{ border-color:#556677; background-color:transparent; color:#AABBCC; }
+.pageNumberBox.dark p a:hover{ border-color:#556677; color:#00ffff; }
+.pageNumberBox.dark p a:active{ }
+.pageNumberBox.dark p a.curr{ border-color:#556677; background-color:#556677; color:#FFFFFF; }
+.pageNumberBox.dark p .pageCount{ background-color:transparent; color:#AABBCC; }
+.pageNumberBox.dark p.jumpBox{ background-color:transparent; color:#AABBCC; }
+.pageNumberBox.dark p.jumpBox input.inputPageNum{ background-color:transparent; color:#AABBCC; }
+/*24.禁用*/
+.disable{
+  -webkit-filter:grayscale(100%);
+  -moz-filter:grayscale(100%);
+  -ms-filter:grayscale(100%);
+  -o-filter:grayscale(100%);
+  filter:grayscale(100%);
+  filter:gray;
+  opacity:0.7;
+}
+.disable:after{ background-color:rgba(0, 0, 0, 0.001); border-color:rgba(255, 255, 255, 0.5) }
+.blur:after{ background-color:rgba(0, 0, 0, 0.001); }
+/*26、对话气泡*/
+.elfBubble{ border-color:#e6e6e6; background-color:#FFFFFF; color:#98a6ad; }
+.elfBubble.top:before, .elfBubble.top:after{ border-color:transparent; border-bottom-color:#e6e6e6; }
+.elfBubble.top:after{ border-color:transparent; border-bottom-color:#FFFFFF; }
+.elfBubble.bottom:before, .elfBubble.bottom:after{ border-color:transparent; border-top-color:#e6e6e6; }
+.elfBubble.bottom:after{ border-color:transparent; border-top-color:#FFFFFF; }
+.elfBubble.left:before, .elfBubble.left:after{ border-color:transparent; border-right-color:#e6e6e6; }
+.elfBubble.left:after{ border-color:transparent; border-right-color:#FFFFFF; }
+.elfBubble.right:before, .elfBubble.right:after{ border-color:transparent; border-left-color:#e6e6e6; }
+.elfBubble.right:after{ border-color:transparent; border-left-color:#FFFFFF; }
+/*29.关键字输入框*/
+.elfKeywordGroup{ border-color:#274e87; background-color:rgba(0, 0, 0, 0.3); }
+.elfKeywordGroup.focus{ border-color:rgba(0, 114, 229, 1); box-shadow:0 0 8px 0 rgba(0, 127, 255, .75); background-color:rgba(0, 0, 0, 0.4); }
+.elfKeywordGroup .keyword{ border-color:rgba(255, 255, 255, 0.25); color:rgba(64, 255, 248, 0.75); }
+.elfKeywordGroup .keyword:after{ color:rgba(100, 187, 255, 0.05); }
+.elfKeywordGroup .keyword:hover:after{ color:rgba(100, 187, 255, 1); }
+.elfKeywordGroup input{ border-color:rgba(0, 0, 0, 0); background-color:rgba(0, 0, 0, 0); box-shadow:none; }

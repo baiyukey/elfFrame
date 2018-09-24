@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="keywords" content="js插件,控件,uielf,弹窗,elfAlert" />
+  <meta name="description" content="elfAlert是UI精灵中的组件之一,用于将页面的内容弹出显示,或者自定义封装后支持更灵活的信息弹出" />
+  <title>弹窗插件elfAlert.js</title>
+  <script type="text/javascript" data-dir="/media/" data-js="config,utils/dispatch" src="/media/js/utils/headLoader.min.js"></script>
+</head>
+<body>
+<article>
+  <section class="fClear bottomLine">
+    <h1 class="striking">弹窗插件<span class="font18 mgl10">elfAlert.js</span></h1>
+    <span class="font14 gray">elfAlert.js用于将页面内的元素以层的形式弹出并突出显示</span>
+    <span class="font14 h1Type"><i>弹窗插件</i><i class="iconAngleLeft mgl10 mgr10"></i><i>jquery插件</i></span>
+  </section>
+  <section>
+    <h5 class="head">试一试</h5>
+    <div class="content">
+      <div style="height:130px;">
+        <div class="alert" id="thisWindow" style="width:300px;">
+          <div class="alertTitle">
+            <p>UI精灵的小窗口</p>
+          </div>
+          <form class="alertContent">
+            <div class="pd10">
+              <p>一个简单的实例</p>
+            </div>
+            <div class="alertButtonBox">
+              <a class="button submit" href="#"><span class="M">&nbsp;&nbsp;&nbsp;&nbsp;确&nbsp;&nbsp;定&nbsp;&nbsp;&nbsp;&nbsp;</span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="button cancel" href="#"><span class="M contrast">&nbsp;&nbsp;&nbsp;&nbsp;取&nbsp;&nbsp;消&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <a class="button mgt10" id="quickTest"><span>试一试将上面的窗口弹出</span></a>
+      <pre class="mgt10"><code class="javascript">$("#thisWindow").elfAlert();</code></pre>
+    </div>
+  </section>
+  <section>
+    <h5 class="head">如何使用</h5>
+    <div class="content">
+      <p>1.引入插件</p>
+      <pre><code class="html">&lt;script type="text/javascript" src="/media/js/libs/jquery.min.js"&gt;&lt;/script&gt;&lt;!--jquery库--&gt;
+       &lt;script type="text/javascript" src="/media/js/libs/jquery.elfAlert.js"&gt;&lt;/script&gt;&lt;!--插件库--&gt;</code></pre>
+      <p class="mgt10">2.语法及参数</p>
+      <pre><code class="javascript">openValue={
+      "fadeTime":300,//Number | 渐显毫秒,默认300 | 可选
+      "mark":true,//Boolean | 是否生成遮挡层,默认生成 | 可选
+      "markOpacity":0.15,//Number | 遮挡层透明度,默认0.15 | 可选
+      "markColor":"#FFF",//String | 遮挡层背景色,默认"#FFF" | 可选
+      "callback":false,//Function | 回调函数,默认false | 可选
+      "callbackArr":null,//Array | 回调函数参数,数组格式,默认null | 可选
+      "closeBtn":true,//Boolean | 弹出的元素右上角是否显示一个关闭按钮,默认显示 | 可选
+      "animate":100//Number | 弹窗进场滑动的高度(像素),默认100px | 可选
+      "linkLine":false//Boolean | 按钮与窗体之间创建一根连线,默认false | 可选
+      "scroll":false//Boolean |是否允许滚动窗口,默认false | 可选
+      };
+      closeValue={
+      "callback":false//Function | 回调函数,默认false | 可选
+      };
+      $(element).elfAlert(openValue);//弹出窗口
+      $(element).elfAlertExit(closeValue);//关闭窗口</code></pre>
+    </div>
+  </section>
+  <section>
+    <h5 class="head">注意事项</h5>
+    <div class="content">
+      <p>1.如果参数closeBtn=true时,插件会在弹出层的右上角提供一个关闭按钮,如果想增加其它关闭按钮,只需将其它关闭按钮赋予class类"cancel"即可,例如:</p>
+      <pre><code class="html">&lt;a class="cancel"&gt;关闭&lt;/a&gt;</code></pre>
+      <p class="mgt10">2.如果使用参数linkLine,需要取按钮事件event为实参,如果点击的按钮无法获取event(例如canvas中的按钮),那么需要自定义一个event,event的数据结构如下:</p>
+      <pre><code class="javascript">event={
+        "type":"custom",
+        "target":{
+          "offset":function(){
+            return {
+            "left":0,//此处自定义
+            "top":0//此处自定义
+            };
+          },
+          "outerWidth":function(){
+            return 0;//此处自定义
+          }
+        }
+        }</code></pre>
+    </div>
+  </section>
+  <section>
+    <h5 class="head">代码下载</h5>
+    <p class="content">
+      <a href="https://github.com/baiyukey/elfAlert" target="_blank">javascript开源代码请到github查看</a>
+    </p>
+  </section>
+  <section>
+    <h5 class="head">责任声明</h5>
+    <ul class="content explain">
+      <li>代码开源,对应方法开放,用户可以免费使用,但作者保留代码的升级及修改的权利;</li>
+      <li>由于代码以自愿使用为原则,作者不承担任何法律责任,特此声明!</li>
+      <li>如果您有任何疑问,您也可以<a href="mailto:baiyukey@qq.com?subject=来自uiElf.com的邮件-(邮件标题)" target="_blank">联系作者(baiyukey@qq.com)</a>,我会非常乐意为您解疑.
+      </li>
+    </ul>
+  </section>
+</article>
+<a class="displayNone" href="http:/www.uielf.com/componentIndex.html#%40002f0063006f006d0070006f006e0065006e00740053007500620070006100670065002f0065006c00660041006c0065007200740048006f006d0065" target="_self">查看源网页</a>
+</body>
+</html>

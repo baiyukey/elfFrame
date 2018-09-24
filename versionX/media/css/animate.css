@@ -1,0 +1,70 @@
+a.button span, a.checkbox, a.radio, a.switch, .downList a, .pageNumberBox a, ul.menu li a, ul.menu li a *, input, textarea{ transition-property:width, height, background, opacity, left, border-color, color; transition-duration:300ms; }
+a.switchPlus *{ transition-property:left, margin-left, background-color, border-color, opacity; transition-duration:300ms; }
+a.switchCss3, a.switchCss3:after, a.switchCss3:before, a.switchCss3 *{ transition-property:opacity, width, padding, background-color; transition-duration:300ms; }
+article > section{transition-property:background-color, border-color;transition-duration:300ms;}
+@-webkit-keyframes rippleDrop{
+  100%{
+    -webkit-transform:scale(2);
+    transform:scale(2);
+    opacity:0;
+  }
+}
+@keyframes rippleDrop{
+  100%{
+    -webkit-transform:scale(2);
+    transform:scale(2);
+    opacity:0;
+  }
+}
+@keyframes rotate{
+  0%{
+    opacity:0.1;
+    transform:rotate(0deg) scale(0.8);
+  }
+  50%{
+    transform:rotate(360deg) scale(1);
+    opacity:1;
+  }
+  100%{
+    transform:rotate(720deg) scale(0.8);
+    opacity:0.1;
+  }
+}
+.hasRipple{
+  position:relative;
+  overflow:hidden;
+}
+.ripple{
+  width:0;
+  height:0;
+  border-radius:50%;
+  background:rgba(255, 255, 255, 0.4);
+  -webkit-transform:scale(0);
+  -ms-transform:scale(0);
+  transform:scale(0);
+  position:absolute;
+  z-index:999;
+  opacity:1;
+}
+.rippleEffect{
+  -webkit-animation:rippleDrop .4s linear;
+  animation:rippleDrop .4s linear;
+}
+.rotate{
+  animation:rotate 3s cubic-bezier(0.3, 0.5, 0.5, 0.3) infinite;
+}
+/*转子*/
+/*转子样式*/
+.turboInOut{ display:inline-block;width:1em;height:1em; line-height:1em; position:relative; vertical-align:middle; text-align:center; }
+.turboInOut i{ position:absolute;width:1em;height:1em;line-height:1em; top:0; left:0; font-style:normal; font-weight:normal; }
+.turboInOut i.text{ position:absolute; display:inline-block;font-size:0.4em; width:2.5em;height:2.5em;line-height:2.5em;transition-property:color;transition-duration:300ms;}
+.turboInOut i.text *{line-height:normal;transition-property:color;transition-duration:300ms;}
+.turboInOut i.turboIn svg{width:1em;height:1em;left:0;top:0;}
+/*转子动画*/
+.turboInOut{ animation:clockwise 1s ease 1; }
+.turboInOut .turboIn{ animation:clockwise 10s linear infinite; }
+.turboInOut .turboOut{ animation:counterclockwise 60s linear infinite; }
+.turboInOut.hover{ animation:counterclockwise 1s ease 1; }
+.turboInOut.hover .turboIn{ animation:clockwise 5s linear infinite; }
+.turboInOut.hover .turboOut{ animation:counterclockwise 10s linear 1s infinite; }
+.elfCirclePercent .turboInOut{animation:none;}

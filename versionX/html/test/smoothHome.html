@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="keywords" content="js插件,控件,uielf,弹窗,elfAlert" />
+  <meta name="description" content="elfAlert是UI精灵中的组件之一,用于将页面的内容弹出显示,或者自定义封装后支持更灵活的信息弹出" />
+  <title>动画插件smooth.js</title>
+  <script type="text/javascript" data-dir="/media/" data-js="config,utils/dispatch" src="/media/js/utils/headLoader.min.js"></script>
+</head>
+<body>
+<article>
+  <section class="fClear bottomLine">
+    <h1 class="striking">动画插件<span class="font18 mgl10">smooth.js</span>
+    </h1>
+    <span class="font14 gray">smooth.js用于平滑运行一个CSS动画并根据需要执行一个回调函数</span>
+    <span class="font14 h1Type"><i>smooth.js</i><i class="iconAngleLeft mgl10 mgr10"></i><i>jquery插件</i></span>
+  </section>
+  <section>
+    <h5 class="head">试一试</h5>
+    <div class="content">
+      <div class="center blackBg" id="testArea" style="width:500px; height:150px; line-height:150px;">
+        #testArea为尺寸为500*150像素
+      </div>
+      <a class="button mgt10" id="quickTest"><span>宽度动画成为800</span></a><a class="button mgt10 mgl5" id="quickTest2"><span>宽度动画成为500</span></a>
+      <pre class="mgt10"><code class="javascript"> $("#testArea").smooth({"width":800},function(){$("#testArea").html('#testArea为尺寸为&lt;span class="striking font24">800&lt;/span>*150像素')});
+      $("#testArea").smooth({"width":500},function(){$("#testArea").html('#testArea为尺寸为500*150像素')});</code></pre>
+    </div>
+  </section>
+  <section>
+    <h5 class="head">如何使用</h5>
+    <div class="content">
+      <p>引入插件</p>
+      <pre><code class="html">&lt;script type="text/javascript" src="/media/js/libs/jquery.min.js"&gt;&lt;/script&gt;&lt;!--jquery库--&gt;
+       &lt;script type="text/javascript" src="/media/js/libs/jquery.smooth.js"&gt;&lt;/script&gt;&lt;!--动画插件--&gt;</code></pre>
+      <p class="mgt10">-语法及参数</p>
+      <pre><code class="javascript">$(element).smooth(_css,_ms,_callback,_thisTween);
+      $(element).smooth(_css,_callback);//注意! 当只有两个参数时,第一个为CSS,第二个为回调函数,动画运行时长为300ms
+      $(element).smoothIn(_ms,_callback);//渐渐显出,相当于$.fn.fadeIn();
+      $(element).smoothOut(_ms,_callback);//渐渐隐藏,相当于$.fn.fadeOut(); 
+      //_css : CSS | 目标CSS | 可选
+      //_ms : Number | 动画运行时长 | 可选
+      //_callback : Function | 回调函数 | 可选
+      //_thisTween : String | 动画缓动参数,值可以设置为Linear(默认),easeIn,easeOut,easeInOut) | 可选
+      $(element).smoothStop(_freeze,_through);//强制停止动画,相当于$.fn.stop();
+      // _freeze:Boolean | 是否冻结当前动画 | 可选,默认true
+      // _through:Boolean | 是否直达当前动画最终效果(不会执行回调函数) | 可选,默认true
+      </code></pre>
+    </div>
+  </section>
+  <section>
+    <h5 class="head">注意事项</h5>
+    <div class="content">
+      <p>1....</p>
+    </div>
+  </section>
+  <section>
+    <h5 class="head">代码下载</h5>
+    <p class="content">
+      <a href="https://github.com/baiyukey/smooth" target="_blank">javascript开源代码请到github查看</a>
+    </p>
+  </section>
+  <section>
+    <h5 class="head">责任声明</h5>
+    <ul class="content explain">
+      <li>代码开源,对应方法开放,用户可以免费使用,但作者保留代码的升级及修改的权利;</li>
+      <li>由于代码以自愿使用为原则,作者不承担任何法律责任,特此声明!</li>
+      <li>如果您有任何疑问,您也可以<a href="mailto:baiyukey@qq.com?subject=来自uiElf.com的邮件-(邮件标题)" target="_blank">联系作者(baiyukey@qq.com)</a>,我会非常乐意为您解疑.
+      </li>
+    </ul>
+  </section>
+</article>
+<a class="displayNone" href="http:/www.uielf.com/componentIndex.html#%40002f0063006f006d0070006f006e0065006e00740053007500620070006100670065002f0065006c00660041006c0065007200740048006f006d0065" target="_self">查看源网页</a>
+</body>
+</html>
