@@ -10,5 +10,7 @@ npm安装方法<br>
 npm i elf-frame<br>
 注意! elfFrame非单一功能包,建议将versionX目录拷贝到其它目录,避免npm在更新包时被覆盖.<br>
 <br>
+了解更多请访问:http://www.uielf.com
+<br>
 author:白宇(baiyukey)<br>
 email:baiyukey@qq.com
