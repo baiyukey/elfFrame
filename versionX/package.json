@@ -1,0 +1,30 @@
+{
+  "author": {
+    "name": "baiyukey"
+  },
+  "bugs": {
+    "url": "https://github.com/baiyukey/elfFrame/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "frame,js,ui,control board",
+  "homepage": "https://github.com/baiyukey/elfFrame#readme",
+  "keywords": [
+    "frame",
+    "js",
+    "ui",
+    "control",
+    "board"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "elf-frame",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baiyukey/elfFrame.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.7"
+}
