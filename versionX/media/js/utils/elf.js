@@ -85,7 +85,7 @@ window.elf=(function(){
       var logoutBack=function(){
         if(window.top.location.pathname.replace("/static","")!=="/accounts/login.html"){
           alertInfo("由于账户已退出登录，数据请求被拒绝，即将为您返回登录页面。",function(){
-            window.top.location.href="../accounts/login.html"
+            window.top.location.href="../../../html/test/login.html"
           });
         }
       };

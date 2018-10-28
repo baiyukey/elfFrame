@@ -105,9 +105,9 @@ $(function(){
       };
       var leftRight=[];
       var rotateNav=function(){
-        points.sort(function(a,b){return a["y"]<b["y"]});
-        leftRight=[points[0],points[1]];
-        leftRight.sort(function(a,b){return a["x"]>b["x"]});
+        points.sort(function(a,b){return a["y"]-b["y"]});
+        leftRight=[points[1],points[2]];//三角形底边
+        leftRight.sort(function(a,b){return a["x"]-b["x"]});//还是不能很好的把底边计算出来
         var thisRotate=rotate(leftRight[0].x,leftRight[0].y,leftRight[1].x,leftRight[1].y);
         if(val.menu){
           val.menu[0].style.webkitTransform="rotate("+thisRotate+"deg)";

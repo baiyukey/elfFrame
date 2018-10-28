@@ -8,7 +8,7 @@ $(function(){
     let t=(window.innerHeight-h)/2;
     let val={"position":[[-1,t],[-1,h+t],[window.innerWidth/2,h/2+t]],"logo":$("#logo"),"drawRect":true};
     let clickLogin=function(){
-      location.href="testIndex.html";
+      location.href="index.html";
     };
     $(".mainContent").css({"height":window.innerHeight,"margin-top":0});
     $("#menu").hide();

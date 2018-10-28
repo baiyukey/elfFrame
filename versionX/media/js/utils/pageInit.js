@@ -19,6 +19,9 @@ $(function(){
       hljs.highlightBlock(block);
     });
   };
+  var initFooter=function(){
+    $("footer").html('<div class="mgl20 mgb20 font12 gray"><p>© 2018 uiElf.com 版权所有<br> ICP证：黑ICP备18006557号-1</p></div>')
+  };
   var clickLeftMenuA=function(event){
     event.preventDefault();
     var $this=$(this);
@@ -38,6 +41,7 @@ $(function(){
         $("a","#leftMenu").removeClass("current");
         $this.addClass("current");
         $thisH5.parent().addClass("indicateBg").siblings().removeClass("indicateBg");
+        setTimeout(function(){ $thisH5.parent().removeClass("indicateBg");},1000);
       },400);
       $("html,body").smooth({"scrollTop":$thisH5.offset().top-(h5Index===0 ? $thisH5.offset().top : 11)},500);
     }
@@ -50,7 +54,7 @@ $(function(){
         if($(e).offset().top>=$(window).scrollTop()){
           var thisText=$.trim($(e).text());
           $thisA=$("a","#leftMenu").filter(":contains('"+thisText+"')");
-          $(e).parent().addClass("indicateBg").siblings().removeClass("indicateBg");
+          //          $(e).parent().addClass("indicateBg").siblings().removeClass("indicateBg");
           return false;
         }
       });
@@ -65,4 +69,5 @@ $(function(){
   $(window).on("scroll",this,scrollWindow);
   initMenu();
   initCode();
+  initFooter();
 });

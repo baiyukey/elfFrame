@@ -4,7 +4,6 @@
 //日期:2017.08.19
 $(function(){
   //var
-  var thisPageName=window.top.location.pathname.split("/").pop().replace(".html","");
   var thisVersion="";
   var subpageLoader=function(){
     var modulesDir="";
@@ -123,8 +122,8 @@ $(function(){
           }
         };
         if($oldSubPage.length>0){
-          if(typeof(animate[window["elfFrame"][thisPageName].animateConvert])!=="undefined"&&showHrefEq>=0&&hideHrefEq>=0){
-            tryNewPage(window["elfFrame"][thisPageName].animateConvert);
+          if(typeof(animate[window["myPage"].animateConvert])!=="undefined"&&showHrefEq>=0&&hideHrefEq>=0){
+            tryNewPage(window["myPage"].animateConvert);
           }
           else if(showHrefEq<0||hideHrefEq<0){
             tryNewPage(0);//无动画
@@ -162,18 +161,16 @@ $(function(){
             modulesDir=$thisPage.attr("data-src").replace(".html","");
             $thisPage.removeAttr("data-src");
           }
-          else if(window["elfFrame"][thisPageName]["homePage"]){
-            modulesDir=window["elfFrame"][thisPageName]["homePage"].replace(".html","");
+          else{
+            if(console) console.error("elfFrame首页未定义,定义首页方法请访问http://www.uielf.com/elfFrame/;");
           }
           if(modulesDir===""){
-            if(console) console.log("%c首页地址错误,程序被中断.","color:#ff0000;");
+            if(console) console.error("首页地址错误,程序被中断.");
             return false;
           }
         }
         catch(e){
-          if(console){
-            console.log('%c可能未定义window["elfFrame"][thisPageName].homePage',"color:#ff0000");
-          }
+          if(console) console.error("elfFrame首页未定义,定义首页方法请访问http://www.uielf.com/elfFrame/;");
           return false;
         }
         var indexParam=modulesDir.split("?")[1] ? "?"+modulesDir.split("?")[1] : "";
@@ -334,10 +331,6 @@ $(function(){
       setInterval(checkInterval,150);
     }
   };
-  if(typeof(window["elfFrame"])==="undefined"&& typeof(window["elfFrame"][thisPageName])!=="undefined"){
-    alert('呃!config.js中未配置window["elfFrame"]["'+thisPageName+'"]或未获取到相关信息,elfFrame已终止');
-    return false;
-  }
   thisVersion=reVersion();
   var thisPageLoader=new subpageLoader();
   var runThis=function(_e){
